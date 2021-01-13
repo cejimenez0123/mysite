@@ -16,3 +16,6 @@ def post_detail(request, year, month, day, post):
     'post/detail.html', 
     {'post': post}) 
 
+def test(request):
+    return render(request, 'blog/test.html')
+

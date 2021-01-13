@@ -17,7 +17,11 @@ Including another URLconf
 from django.urls import path, include 
 from django.contrib import admin 
 from blog import views
-urlpatterns = [ 
+
+
+urlpatterns = [
     path('',views.post_list,name="post_list"),
-    path('admin/', admin.site.urls), 
-    path('blog/', include('blog.urls', namespace='blog')), ] 
+    path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls', namespace='blog')),
+    path('test/', views.test, name='test')
+] 
