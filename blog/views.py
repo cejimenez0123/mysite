@@ -4,7 +4,7 @@ from .models import Post
 def post_list(request): 
     posts = Post.published.all() 
     context={'posts': posts}
-    return render(request,'post/list.html', 
+    return render(request,'blog/post/list.html', 
         context) 
 
 def post_detail(request, year, month, day, post): 
@@ -13,7 +13,7 @@ def post_detail(request, year, month, day, post):
     publish__year=year, 
     publish__month=month,  publish__day=day) 
     return render(request, 
-    'post/detail.html', 
+    'blog/post/detail.html', 
     {'post': post}) 
 
 def test(request):
